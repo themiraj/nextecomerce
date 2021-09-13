@@ -1,20 +1,44 @@
 import React from 'react'
+import Link from 'next/link'
 export default function Navbar() {
     return (
-        <div>
-            <nav className="#000000 black">
-                <div className="nav-wrapper">
-                    <div className="container"> 
-                        <a href="#!" className="brand-logo"><i className="material-icons">cloud</i>Ecommerce</a>
-                        <ul className="right hide-on-med-and-down">
-                            <li><a href="sass.html"><i className="material-icons">search</i></a></li>
-                            <li><a href="badges.html"><i className="material-icons">shopping_cart</i></a></li>
-                            <li><a href="collapsible.html"><i className="material-icons">vpn_key</i></a></li>
-                            <li><a href="mobile.html"><i className="material-icons">settings</i></a></li>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div className="container">
+                <a className="navbar-brand" href="#">Ecommerce</a>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li className="nav-item">
+                        <a className="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li className="nav-item">
+                        <a className="nav-link" href="#">Link</a>
+                        </li>
+                        <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a className="dropdown-item" href="#">Action</a></li>
+                            <li><a className="dropdown-item" href="#">Another action</a></li>
+                            <li><hr className="dropdown-divider"/></li>
+                            <li><a className="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                    </div>
+                        </li>
+                        <li className="nav-item">
+                        <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
                 </div>
+                <div className="login-signUp">
+                    <a href="#" className="btn btn-success me-2"><i class="fas fa-user-tie"></i> Membership</a>
+                    <Link href="/login">
+                        <a className="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    </Link>
+                </div>
+            </div>
             </nav>
-        </div>
     )
 }
